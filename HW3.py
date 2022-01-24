@@ -3,8 +3,7 @@ import os
 from subprocess import list2cmdline
 
 #Used help from w3schools and stackoverflow.
-def numLetterCheck():
-    word = input("Enter word to test.")
+def numLetterCheck(word):
     vowel = 0 #vowel count
     consonant = 0 #consonant count
 
@@ -19,10 +18,8 @@ def numLetterCheck():
         return vowel > consonant
 
 #Used python documentation for help.
-def cylinderVol():
-   height = float(input("Enter height of cylinder."))
-   radius = float(input("Enter radius of cylinder."))
-   volume = float(height * math.pow(radius, 2) * math.pi)
+def cylinderVol(height, radius):
+   volume = float(height * math.pow(radius, 2) * math.pi) #equation for volume of cylinder 
    return volume
 
 #Help from StackOverflow and W3schools
@@ -45,7 +42,7 @@ list1 = ["Crocodile", "Face", "Centurion"]
 list2 = ["Sheath", "Button", "Random"]
 list3 = ["Supercalifragilistic", "Nevada", "Las Vegas"]
 listOfLists = [list1, list2, list3]
-print(numLetterCheck())
-print(cylinderVol())
+print(numLetterCheck("Word"))
+print(cylinderVol(5, 5))
 print(csvMaker(list))
 print(csvList(listOfLists))
